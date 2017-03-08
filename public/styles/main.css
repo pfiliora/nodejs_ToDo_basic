@@ -1,0 +1,36 @@
+/* CURRENTLY IN: styles/main.css */
+html {
+	font-size: 12px;
+}
+
+#todoapp .todo-col {
+	/*border: 1px solid black;*/
+	text-align: center;
+}
+
+#todoapp .todo-spinner {
+	animation: spinner 2.0s linear infinite;
+}
+
+#todoapp .todolist-item {
+	font-weight: bold;
+	text-align: left;
+}
+
+#todoapp .todolist-icon {
+	float: right;
+	margin: 0 0.25rem;
+}
+
+#todoapp .todo-addbtn {
+	cursor: pointer;
+}
+
+@keyframes spinner {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

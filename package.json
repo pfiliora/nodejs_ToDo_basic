@@ -1,0 +1,20 @@
+{
+  "name": "todolist-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/supervisor server/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "lowdb": "^0.15.5",
+    "nodemon": "^1.11.0",
+    "supervisor": "^0.12.0"
+  }
+}
