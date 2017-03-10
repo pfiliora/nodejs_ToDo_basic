@@ -38,7 +38,7 @@ const onRequest = (request, response) => {
 					const requestBody = Buffer.concat(body).toString();
 					// Add a post
 					db.get('todos').push({
-						id: Date.now(), 
+						id: Date.now(),
 						data: JSON.parse(requestBody)
 					}).write();
 
@@ -63,7 +63,7 @@ const onRequest = (request, response) => {
 				.on('end', () => {
 					const requestBody = Buffer.concat(body).toString();
 					const dataPayload = JSON.parse(requestBody);
-					
+
 
 					db.get('todos')
 					  .find({ id })
@@ -73,7 +73,7 @@ const onRequest = (request, response) => {
 
 					// // Add a post
 					// db.get('todos').push({
-					// 	id: Date.now(), 
+					// 	id: Date.now(),
 					// 	data: JSON.parse(requestBody)
 					// }).write();
 
@@ -84,12 +84,10 @@ const onRequest = (request, response) => {
 		}
 
 		if (path.indexOf('/todo') === 0 && isLastBitNum && method.toUpperCase() === 'DELETE') {
-			console.log('me');
 
 			db.get('todos')
 			  .remove({ id })
 			  .write()
-
 
 			response.setHeader('Content-Type', 'application/json');
 			response.end(JSON.stringify(db.get('todos').value()));
@@ -114,23 +112,8 @@ const onRequest = (request, response) => {
 			});
 	}
 
-	
+
 }
 
 
 module.exports = onRequest;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -17,9 +17,30 @@ html {
 	text-align: left;
 }
 
+#todoapp .todolist-item-done {
+	text-decoration: line-through;
+	color: grey;
+}
+
 #todoapp .todolist-icon {
 	float: right;
-	margin: 0 0.25rem;
+	margin: 0 0.5rem;
+	overflow: visible;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+#todoapp .check-icon {
+    background-color: #78CD51;
+    border-color: #78CD51;
+    color: #FFFFFF;
+}
+
+#todoapp .trash-icon {
+	background-color: #ff6c60;
+	border-color: #ff6c60;
+	color: #FFFFFF;
 }
 
 #todoapp .todo-addbtn {
